@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Idealize.VO\Idealize.VO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Sistema.Arquitetura.Library.Core">
+      <HintPath>..\Sistema.Arquitetura.Library.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sistema.Arquitetura.Library.Data">
+      <HintPath>..\Sistema.Arquitetura.Library.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
