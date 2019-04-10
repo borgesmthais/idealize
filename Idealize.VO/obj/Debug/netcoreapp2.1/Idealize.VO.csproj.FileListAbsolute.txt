@@ -1,0 +1,9 @@
+D:\FACULDADE\Lab II\Idealize\Idealize.VO\bin\Debug\netcoreapp2.1\Idealize.VO.deps.json
+D:\FACULDADE\Lab II\Idealize\Idealize.VO\bin\Debug\netcoreapp2.1\Idealize.VO.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.VO\bin\Debug\netcoreapp2.1\Idealize.VO.pdb
+D:\FACULDADE\Lab II\Idealize\Idealize.VO\obj\Debug\netcoreapp2.1\Idealize.VO.csprojAssemblyReference.cache
+D:\FACULDADE\Lab II\Idealize\Idealize.VO\obj\Debug\netcoreapp2.1\Idealize.VO.csproj.CoreCompileInputs.cache
+D:\FACULDADE\Lab II\Idealize\Idealize.VO\obj\Debug\netcoreapp2.1\Idealize.VO.AssemblyInfoInputs.cache
+D:\FACULDADE\Lab II\Idealize\Idealize.VO\obj\Debug\netcoreapp2.1\Idealize.VO.AssemblyInfo.cs
+D:\FACULDADE\Lab II\Idealize\Idealize.VO\obj\Debug\netcoreapp2.1\Idealize.VO.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.VO\obj\Debug\netcoreapp2.1\Idealize.VO.pdb

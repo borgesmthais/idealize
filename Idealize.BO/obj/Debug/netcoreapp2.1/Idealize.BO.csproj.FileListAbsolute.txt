@@ -1,0 +1,4 @@
+D:\FACULDADE\Lab II\Idealize\Idealize.BO\obj\Debug\netcoreapp2.1\Idealize.BO.csprojAssemblyReference.cache
+D:\FACULDADE\Lab II\Idealize\Idealize.BO\obj\Debug\netcoreapp2.1\Idealize.BO.csproj.CoreCompileInputs.cache
+D:\FACULDADE\Lab II\Idealize\Idealize.BO\obj\Debug\netcoreapp2.1\Idealize.BO.AssemblyInfoInputs.cache
+D:\FACULDADE\Lab II\Idealize\Idealize.BO\obj\Debug\netcoreapp2.1\Idealize.BO.AssemblyInfo.cs

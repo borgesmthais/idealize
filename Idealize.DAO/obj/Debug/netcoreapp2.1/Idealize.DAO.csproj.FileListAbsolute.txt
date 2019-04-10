@@ -1,0 +1,4 @@
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.csprojAssemblyReference.cache
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.csproj.CoreCompileInputs.cache
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.AssemblyInfoInputs.cache
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.AssemblyInfo.cs
