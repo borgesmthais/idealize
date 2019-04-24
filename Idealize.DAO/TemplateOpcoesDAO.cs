@@ -9,7 +9,7 @@ namespace Idealize.DAO
     /// <summary>
     /// Classe de Acesso a Dados da Tabela aluno
     /// </summary>
-    public class TemplateOpcoesDAO : NativeDAO<TemplateOpcoes>, IBaseDAO<TemplateOpcoes, int>
+    public class TemplateOpcoesDAO : NativeDAO<TemplateOpcoes>
     {
 
         /// <summary>

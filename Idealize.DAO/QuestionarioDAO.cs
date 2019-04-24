@@ -9,7 +9,7 @@ namespace Idealize.DAO
     /// <summary>
     /// Classe de Acesso a Dados da Tabela aluno
     /// </summary>
-    public class QuestionarioDAO : NativeDAO<Questionario>, IBaseDAO<Questionario, int>
+    public class QuestionarioDAO : NativeDAO<Questionario>
     {
 
         /// <summary>

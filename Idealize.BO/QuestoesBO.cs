@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Sistema.Arquitetura.Library.Core.Util.Security;
+using Idealize.VO;
+using Idealize.DAO;
 
 namespace Idealize.BO
 {
@@ -8,7 +9,7 @@ namespace Idealize.BO
     /// <summary>
     /// Classe de Negocios da Tabela Questoes
     /// </summary>
-    public class QuestoesBO : IBaseBO<Questoes, int>
+    public class QuestoesBO
     {
 
         #region Variaveis Locais
@@ -24,15 +25,6 @@ namespace Idealize.BO
         #endregion
 
         #region Construtores
-
-        /// <summary>
-        /// Inicializa uma instância da classe. Cria uma nova conexao com o banco de dados
-        /// </summary>
-        public QuestoesBO(ObjectSecurity pObjectSecurity) : base()
-        {
-            QuestoesDAO = new QuestoesDAO(ConnectionFactory.GetDbConnectionDefault(), pObjectSecurity);
-            objectSecurity = pObjectSecurity;
-        }
 
         /// <summary>
         /// Inicializa uma instância da classe. Recebendo como parametro a conexao com banco de dados
@@ -111,7 +103,7 @@ namespace Idealize.BO
             QuestoesDAO.BeginTransaction();
             try
             {
-                iRetorno = QuestoesDAO.DeleteByStoredProcedure(pidQuestao, false, objectSecurity.UserSystem);
+                //iRetorno = QuestoesDAO.DeleteByStoredProcedure(pidQuestao, false, objectSecurity.UserSystem);
                 QuestoesDAO.CommitTransaction();
             }
             catch (Exception ex)
@@ -129,31 +121,7 @@ namespace Idealize.BO
         /// <returns>Registro da PK</returns>
         public Questoes SelectByPK(int pidQuestao)
         {
-            return QuestoesDAO.SelectByPK(pidQuestao);
-        }
-
-        /// <summary>
-        /// Realiza a busca Lookup
-        /// </summary>
-        /// <param name="pObject">Objeto com os valores a ser atribuidos no filtro</param>
-        /// <returns>Lista de Objetos que atendam ao filtro</returns>
-        public IList<Questoes> ListForLookup(Questoes pObject)
-        {
-            return QuestoesDAO.ListForLookup(pObject);
-        }
-
-        /// <summary>
-        /// Realiza a busca pelos parametros informados no objeto por stored Procedure
-        /// </summary>
-        /// <param name="pObject">Objeto com os valores a ser atribuidos no filtro</param>
-        /// <param name="pNumRegPag">Número de registros por página</param>
-        /// <param name="pNumPagina">Página corrente</param>
-        /// <param name="pDesOrdem">Critério de ordenação</param>
-        /// <param name="pNumTotReg">Quantidade de registros que a consulta retorna</param>
-        /// <returns>Lista de Objetos que atendam ao filtro</returns>
-        public IList<Questoes> ListForGrid(Questoes pObject, int pNumRegPag, int pNumPagina, string pDesOrdem, out int pNumTotReg)
-        {
-            return QuestoesDAO.ListForGrid(pObject, pNumRegPag, pNumPagina, pDesOrdem, out pNumTotReg);
+            return new Questoes();
         }
 
         #region IDisposable Support

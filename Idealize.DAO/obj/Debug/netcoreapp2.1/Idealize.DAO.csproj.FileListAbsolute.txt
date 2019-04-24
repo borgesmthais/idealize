@@ -2,3 +2,15 @@ D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.c
 D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.csproj.CoreCompileInputs.cache
 D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.AssemblyInfoInputs.cache
 D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.AssemblyInfo.cs
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\bin\Debug\netcoreapp2.1\Idealize.DAO.deps.json
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\bin\Debug\netcoreapp2.1\Idealize.DAO.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\bin\Debug\netcoreapp2.1\Idealize.DAO.pdb
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\bin\Debug\netcoreapp2.1\Idealize.VO.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\bin\Debug\netcoreapp2.1\Sistema.Arquitetura.Library.Core.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\bin\Debug\netcoreapp2.1\Sistema.Arquitetura.Library.Data.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\bin\Debug\netcoreapp2.1\Idealize.VO.pdb
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.csproj.CopyComplete
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\obj\Debug\netcoreapp2.1\Idealize.DAO.pdb
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\bin\Debug\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.DAO\bin\Debug\netcoreapp2.1\System.Data.SqlClient.xml

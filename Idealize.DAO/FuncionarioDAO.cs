@@ -1,7 +1,8 @@
 ﻿using Sistema.Arquitetura.Library.Core;
-using Sistema.Arquitetura.Library.Core.Interface;
 using Sistema.Arquitetura.Library.Core.Util.Security;
 using Idealize.VO;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Idealize.DAO
 
@@ -9,9 +10,9 @@ namespace Idealize.DAO
     /// <summary>
     /// Classe de Acesso a Dados da Tabela aluno
     /// </summary>
-    public class FuncionarioDAO : NativeDAO<Funcionario>, IBaseDAO<Funcionario, int>
+    public class FuncionarioDAO : NativeDAO<Funcionario>
     {
-
+        private SqlConnection conn = new SqlConnection();
         /// <summary>
         /// Inicializa uma instância da classe
         /// </summary>
@@ -20,12 +21,15 @@ namespace Idealize.DAO
         /// <returns>Objeto inserido</returns>
         public FuncionarioDAO(System.Data.IDbConnection connection, ObjectSecurity objectSecurity) : base(connection, objectSecurity)
         {
+            string aux = connection.ConnectionString;
+            conn.ConnectionString = aux;
         }
 
         #region Métodos de Persistência Básicos
 
         /// <summary>
         /// Realiza o insert do objeto por stored Procedure
+        /// 
         /// </summary>
         /// <param name="pObject">Objeto com os valores a ser inserido</param>
         /// <returns>Objeto Inserido</returns>
@@ -86,6 +90,36 @@ namespace Idealize.DAO
             StatementDAO statement = new StatementDAO(sql);
             statement.AddParameter("idFuncionario", idFuncionario);
             return this.ExecuteReturnT(statement);
+        }
+
+        /// <summary>
+        /// Retorna registro pela PK
+        /// </summary>
+        /// <param name="idObject">PK da tabela</param>
+        /// <returns>Registro da PK</returns>
+        public Funcionario AutenticaLogin(Funcionario pObject)
+        {
+            string sql = "dbo.S_sp_LoginFuncionario";
+            SqlCommand cmd = new SqlCommand(sql);
+            cmd.Parameters.AddWithValue("@login", pObject.login);
+            cmd.Parameters.AddWithValue("@senha", pObject.senha);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conn;
+
+            conn.Open();
+
+            var rdr = cmd.ExecuteReader();
+
+            Funcionario funcionario = null;
+
+            while (rdr.Read())
+            {
+                funcionario = new Funcionario();
+                funcionario.idFuncionario = (int)rdr["idFuncionario"];
+                funcionario.idGrupo = (int)rdr["idGrupo"];
+            }
+
+            return funcionario;
         }
         #endregion
 

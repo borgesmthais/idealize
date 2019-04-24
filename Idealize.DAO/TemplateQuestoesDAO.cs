@@ -9,9 +9,8 @@ namespace Idealize.DAO
     /// <summary>
     /// Classe de Acesso a Dados da Tabela aluno
     /// </summary>
-    public class TemplateQuestoesDAO : NativeDAO<TemplateQuestoes>, IBaseDAO<TemplateQuestoes, int>
+    public class TemplateQuestoesDAO : NativeDAO<TemplateQuestoes>
     {
-
         /// <summary>
         /// Inicializa uma instância da classe
         /// </summary>

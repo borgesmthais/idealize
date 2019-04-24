@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using Idealize.BO.Factory;
-using Sistema.Arquitetura.Library.Core;
-using Sistema.Arquitetura.Library.Core.Interface;
 using Sistema.Arquitetura.Library.Core.Util.Security;
 using Idealize.VO;
 using Idealize.DAO;
@@ -13,7 +9,7 @@ namespace Idealize.BO
     /// <summary>
     /// Classe de Negocios da Tabela TemplateOpcoes
     /// </summary>
-    public class TemplateOpcoesBO : IBaseBO<TemplateOpcoes, int>
+    public class TemplateOpcoesBO 
     {
 
         #region Variaveis Locais
@@ -29,15 +25,6 @@ namespace Idealize.BO
         #endregion
 
         #region Construtores
-
-        /// <summary>
-        /// Inicializa uma instância da classe. Cria uma nova conexao com o banco de dados
-        /// </summary>
-        public TemplateOpcoesBO(ObjectSecurity pObjectSecurity) : base()
-        {
-            TemplateOpcoesDAO = new TemplateOpcoesDAO(ConnectionFactory.GetDbConnectionDefault(), pObjectSecurity);
-            objectSecurity = pObjectSecurity;
-        }
 
         /// <summary>
         /// Inicializa uma instância da classe. Recebendo como parametro a conexao com banco de dados
@@ -116,7 +103,7 @@ namespace Idealize.BO
             TemplateOpcoesDAO.BeginTransaction();
             try
             {
-                iRetorno = TemplateOpcoesDAO.DeleteByStoredProcedure(pidTemplateOpcao, false, objectSecurity.UserSystem);
+                //iRetorno = TemplateOpcoesDAO.DeleteByStoredProcedure(pidTemplateOpcao, false, objectSecurity.UserSystem);
                 TemplateOpcoesDAO.CommitTransaction();
             }
             catch (Exception ex)
@@ -134,31 +121,7 @@ namespace Idealize.BO
         /// <returns>Registro da PK</returns>
         public TemplateOpcoes SelectByPK(int pidTemplateOpcao)
         {
-            return TemplateOpcoesDAO.SelectByPK(pidTemplateOpcao);
-        }
-
-        /// <summary>
-        /// Realiza a busca Lookup
-        /// </summary>
-        /// <param name="pObject">Objeto com os valores a ser atribuidos no filtro</param>
-        /// <returns>Lista de Objetos que atendam ao filtro</returns>
-        public IList<TemplateOpcoes> ListForLookup(TemplateOpcoes pObject)
-        {
-            return TemplateOpcoesDAO.ListForLookup(pObject);
-        }
-
-        /// <summary>
-        /// Realiza a busca pelos parametros informados no objeto por stored Procedure
-        /// </summary>
-        /// <param name="pObject">Objeto com os valores a ser atribuidos no filtro</param>
-        /// <param name="pNumRegPag">Número de registros por página</param>
-        /// <param name="pNumPagina">Página corrente</param>
-        /// <param name="pDesOrdem">Critério de ordenação</param>
-        /// <param name="pNumTotReg">Quantidade de registros que a consulta retorna</param>
-        /// <returns>Lista de Objetos que atendam ao filtro</returns>
-        public IList<TemplateOpcoes> ListForGrid(TemplateOpcoes pObject, int pNumRegPag, int pNumPagina, string pDesOrdem, out int pNumTotReg)
-        {
-            return TemplateOpcoesDAO.ListForGrid(pObject, pNumRegPag, pNumPagina, pDesOrdem, out pNumTotReg);
+            return new TemplateOpcoes();
         }
 
         #region IDisposable Support

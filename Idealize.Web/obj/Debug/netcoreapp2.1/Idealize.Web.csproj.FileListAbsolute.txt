@@ -30,3 +30,12 @@ D:\FACULDADE\Lab II\Idealize\Idealize.Web\obj\Debug\netcoreapp2.1\Idealize.Web.V
 D:\FACULDADE\Lab II\Idealize\Idealize.Web\obj\Debug\netcoreapp2.1\Idealize.Web.dll
 D:\FACULDADE\Lab II\Idealize\Idealize.Web\obj\Debug\netcoreapp2.1\Idealize.Web.pdb
 D:\FACULDADE\Lab II\Idealize\Idealize.Web\obj\Debug\netcoreapp2.1\Idealize.Web.csproj.CopyComplete
+D:\FACULDADE\Lab II\Idealize\Idealize.Web\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.g.cshtml.cs
+D:\FACULDADE\Lab II\Idealize\Idealize.Web\bin\Debug\netcoreapp2.1\Idealize.VO.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.Web\bin\Debug\netcoreapp2.1\Idealize.VO.pdb
+D:\FACULDADE\Lab II\Idealize\Idealize.Web\bin\Debug\netcoreapp2.1\Idealize.BO.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.Web\bin\Debug\netcoreapp2.1\Idealize.DAO.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.Web\bin\Debug\netcoreapp2.1\Sistema.Arquitetura.Library.Core.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.Web\bin\Debug\netcoreapp2.1\Sistema.Arquitetura.Library.Data.dll
+D:\FACULDADE\Lab II\Idealize\Idealize.Web\bin\Debug\netcoreapp2.1\Idealize.BO.pdb
+D:\FACULDADE\Lab II\Idealize\Idealize.Web\bin\Debug\netcoreapp2.1\Idealize.DAO.pdb

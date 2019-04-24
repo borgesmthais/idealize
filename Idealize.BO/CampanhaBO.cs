@@ -12,7 +12,7 @@ namespace Idealize.BO
     /// <summary>
     /// Classe de Negocios da Tabela Campanha
     /// </summary>
-    public class CampanhaBO : IBaseBO<Campanha, int>
+    public class CampanhaBO 
     {
 
         #region Variaveis Locais
@@ -28,15 +28,6 @@ namespace Idealize.BO
         #endregion
 
         #region Construtores
-
-        /// <summary>
-        /// Inicializa uma instância da classe. Cria uma nova conexao com o banco de dados
-        /// </summary>
-        public CampanhaBO(ObjectSecurity pObjectSecurity) : base()
-        {
-            CampanhaDAO = new CampanhaDAO(ConnectionFactory.GetDbConnectionDefault(), pObjectSecurity);
-            objectSecurity = pObjectSecurity;
-        }
 
         /// <summary>
         /// Inicializa uma instância da classe. Recebendo como parametro a conexao com banco de dados
@@ -134,30 +125,6 @@ namespace Idealize.BO
         public Campanha SelectByPK(int pidCampanha)
         {
             return CampanhaDAO.SelectByPK(pidCampanha);
-        }
-
-        /// <summary>
-        /// Realiza a busca Lookup
-        /// </summary>
-        /// <param name="pObject">Objeto com os valores a ser atribuidos no filtro</param>
-        /// <returns>Lista de Objetos que atendam ao filtro</returns>
-        public IList<Campanha> ListForLookup(Campanha pObject)
-        {
-            return CampanhaDAO.ListForLookup(pObject);
-        }
-
-        /// <summary>
-        /// Realiza a busca pelos parametros informados no objeto por stored Procedure
-        /// </summary>
-        /// <param name="pObject">Objeto com os valores a ser atribuidos no filtro</param>
-        /// <param name="pNumRegPag">Número de registros por página</param>
-        /// <param name="pNumPagina">Página corrente</param>
-        /// <param name="pDesOrdem">Critério de ordenação</param>
-        /// <param name="pNumTotReg">Quantidade de registros que a consulta retorna</param>
-        /// <returns>Lista de Objetos que atendam ao filtro</returns>
-        public IList<Campanha> ListForGrid(Campanha pObject, int pNumRegPag, int pNumPagina, string pDesOrdem, out int pNumTotReg)
-        {
-            return CampanhaDAO.ListForGrid(pObject, pNumRegPag, pNumPagina, pDesOrdem, out pNumTotReg);
         }
 
         #region IDisposable Support

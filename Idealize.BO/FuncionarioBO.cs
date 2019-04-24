@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using Idealize.BO.Factory;
-using Sistema.Arquitetura.Library.Core;
-using Sistema.Arquitetura.Library.Core.Interface;
+using System.Data;
 using Sistema.Arquitetura.Library.Core.Util.Security;
 using Idealize.VO;
 using Idealize.DAO;
+using Sistema.Arquitetura.Library.Data.DbClient;
 
 namespace Idealize.BO
 {
@@ -13,7 +11,7 @@ namespace Idealize.BO
     /// <summary>
     /// Classe de Negocios da Tabela Funcionario
     /// </summary>
-    public class FuncionarioBO : IBaseBO<Funcionario, int>
+    public class FuncionarioBO 
     {
 
         #region Variaveis Locais
@@ -26,6 +24,8 @@ namespace Idealize.BO
         /// </summary>
         protected ObjectSecurity objectSecurity;
 
+        public ConnectionFactory conn = new ConnectionFactory(Sistema.Arquitetura.Library.Data.DbClient.DbType.MSSQL, "Data Source=localhost;Initial Catalog=idealize;persist security info=True; Integrated Security=SSPI;");
+
         #endregion
 
         #region Construtores
@@ -35,7 +35,7 @@ namespace Idealize.BO
         /// </summary>
         public FuncionarioBO(ObjectSecurity pObjectSecurity) : base()
         {
-            FuncionarioDAO = new FuncionarioDAO(ConnectionFactory.GetDbConnectionDefault(), pObjectSecurity);
+            FuncionarioDAO = new FuncionarioDAO(conn.DbConnection, pObjectSecurity);
             objectSecurity = pObjectSecurity;
         }
 
@@ -116,7 +116,7 @@ namespace Idealize.BO
             FuncionarioDAO.BeginTransaction();
             try
             {
-                iRetorno = FuncionarioDAO.DeleteByStoredProcedure(pidFuncionario, false, objectSecurity.UserSystem);
+                //iRetorno = FuncionarioDAO.DeleteByStoredProcedure(pidFuncionario, false, objectSecurity.UserSystem);
                 FuncionarioDAO.CommitTransaction();
             }
             catch (Exception ex)
@@ -137,28 +137,9 @@ namespace Idealize.BO
             return FuncionarioDAO.SelectByPK(pidFuncionario);
         }
 
-        /// <summary>
-        /// Realiza a busca Lookup
-        /// </summary>
-        /// <param name="pObject">Objeto com os valores a ser atribuidos no filtro</param>
-        /// <returns>Lista de Objetos que atendam ao filtro</returns>
-        public IList<Funcionario> ListForLookup(Funcionario pObject)
+        public Funcionario autenticaLogin(Funcionario pObject)
         {
-            return FuncionarioDAO.ListForLookup(pObject);
-        }
-
-        /// <summary>
-        /// Realiza a busca pelos parametros informados no objeto por stored Procedure
-        /// </summary>
-        /// <param name="pObject">Objeto com os valores a ser atribuidos no filtro</param>
-        /// <param name="pNumRegPag">Número de registros por página</param>
-        /// <param name="pNumPagina">Página corrente</param>
-        /// <param name="pDesOrdem">Critério de ordenação</param>
-        /// <param name="pNumTotReg">Quantidade de registros que a consulta retorna</param>
-        /// <returns>Lista de Objetos que atendam ao filtro</returns>
-        public IList<Funcionario> ListForGrid(Funcionario pObject, int pNumRegPag, int pNumPagina, string pDesOrdem, out int pNumTotReg)
-        {
-            return FuncionarioDAO.ListForGrid(pObject, pNumRegPag, pNumPagina, pDesOrdem, out pNumTotReg);
+            return FuncionarioDAO.AutenticaLogin(pObject);
         }
 
         #region IDisposable Support

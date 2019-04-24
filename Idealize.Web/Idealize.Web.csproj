@@ -5,8 +5,42 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\CSS\materialize\css\materialize.css" />
+    <Content Remove="wwwroot\CSS\materialize\css\materialize.min.css" />
+    <Content Remove="wwwroot\CSS\materialize\js\materialize.js" />
+    <Content Remove="wwwroot\CSS\materialize\js\materialize.min.js" />
+    <Content Remove="wwwroot\CSS\materialize\LICENSE" />
+    <Content Remove="wwwroot\CSS\materialize\README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\CSS\materialize\css\materialize.css" />
+    <None Include="wwwroot\CSS\materialize\css\materialize.min.css" />
+    <None Include="wwwroot\CSS\materialize\js\materialize.js" />
+    <None Include="wwwroot\CSS\materialize\js\materialize.min.js" />
+    <None Include="wwwroot\CSS\materialize\LICENSE" />
+    <None Include="wwwroot\CSS\materialize\README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Idealize.BO\Idealize.BO.csproj" />
+    <ProjectReference Include="..\Idealize.VO\Idealize.VO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Sistema.Arquitetura.Library.Core">
+      <HintPath>..\Sistema.Arquitetura.Library.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sistema.Arquitetura.Library.Data">
+      <HintPath>..\Sistema.Arquitetura.Library.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

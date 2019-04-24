@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Idealize.BO.Factory;
 using Sistema.Arquitetura.Library.Core;
 using Sistema.Arquitetura.Library.Core.Interface;
 using Sistema.Arquitetura.Library.Core.Util.Security;
@@ -14,7 +13,7 @@ namespace Idealize.BO
     /// <summary>
     /// Classe de Negocios da Tabela Resposta
     /// </summary>
-    public class RespostaBO : IBaseBO<Resposta, int>
+    public class RespostaBO 
     {
 
         #region Variaveis Locais
@@ -30,15 +29,6 @@ namespace Idealize.BO
         #endregion
 
         #region Construtores
-
-        /// <summary>
-        /// Inicializa uma instância da classe. Cria uma nova conexao com o banco de dados
-        /// </summary>
-        public RespostaBO(ObjectSecurity pObjectSecurity) : base()
-        {
-            RespostaDAO = new RespostaDAO(ConnectionFactory.GetDbConnectionDefault(), pObjectSecurity);
-            objectSecurity = pObjectSecurity;
-        }
 
         /// <summary>
         /// Inicializa uma instância da classe. Recebendo como parametro a conexao com banco de dados
@@ -117,7 +107,7 @@ namespace Idealize.BO
             RespostaDAO.BeginTransaction();
             try
             {
-                iRetorno = RespostaDAO.DeleteByStoredProcedure(pidResposta, false, objectSecurity.UserSystem);
+               // iRetorno = RespostaDAO.DeleteByStoredProcedure(pidResposta, false, objectSecurity.UserSystem);
                 RespostaDAO.CommitTransaction();
             }
             catch (Exception ex)
@@ -135,31 +125,7 @@ namespace Idealize.BO
         /// <returns>Registro da PK</returns>
         public Resposta SelectByPK(int pidResposta)
         {
-            return RespostaDAO.SelectByPK(pidResposta);
-        }
-
-        /// <summary>
-        /// Realiza a busca Lookup
-        /// </summary>
-        /// <param name="pObject">Objeto com os valores a ser atribuidos no filtro</param>
-        /// <returns>Lista de Objetos que atendam ao filtro</returns>
-        public IList<Resposta> ListForLookup(Resposta pObject)
-        {
-            return RespostaoDAO.ListForLookup(pObject);
-        }
-
-        /// <summary>
-        /// Realiza a busca pelos parametros informados no objeto por stored Procedure
-        /// </summary>
-        /// <param name="pObject">Objeto com os valores a ser atribuidos no filtro</param>
-        /// <param name="pNumRegPag">Número de registros por página</param>
-        /// <param name="pNumPagina">Página corrente</param>
-        /// <param name="pDesOrdem">Critério de ordenação</param>
-        /// <param name="pNumTotReg">Quantidade de registros que a consulta retorna</param>
-        /// <returns>Lista de Objetos que atendam ao filtro</returns>
-        public IList<Resposta> ListForGrid(Resposta pObject, int pNumRegPag, int pNumPagina, string pDesOrdem, out int pNumTotReg)
-        {
-            return RespostaDAO.ListForGrid(pObject, pNumRegPag, pNumPagina, pDesOrdem, out pNumTotReg);
+            return new Resposta();
         }
 
         #region IDisposable Support

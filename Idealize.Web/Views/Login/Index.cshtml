@@ -1,0 +1,50 @@
+﻿@model Idealize.VO.Funcionario
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="Login" style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-size: cover;">
+    <div class="card" style="width: 450px; background-color: rgba(255, 255, 255, 0.9); margin-left: 10px; margin-right: 10px;">
+        <div class="card-content">
+            <div>
+                <form method="post" data-ajax="true" data-ajax-method="post">
+                    <div class="idealize center">
+                        <img alt="Idealize" src="~/images/img4.png" style="width: 162; height: 100px;" />
+                        <h4>Idealize</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 input-field">
+                            <div class="col input-field s12">
+                                <i class="material-icons prefix black-text text-accent-4">account_circle</i>
+                                <input required autocomplete="username" name="login" class="validate invalid" id="input_0" type="text" />
+                                <label class for="input_0">Login</label>
+                            </div>
+                        </div>
+                        <div class="col s12 input-field">
+                            <div class="col input-field s12">
+                                <i class="material-icons prefix black-text text-accent-4">lock</i>
+                                <input required autocomplete="current-password" name="senha" class="validate" id="input_1" type="password" />
+                                <label class for="input_1">Senha</label>
+                            </div>
+                        </div>
+                        <div class="col s12 center">
+                            <button class="btn waves-effect waves-light yellow darken-1" type="submit">
+                                Entrar
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (TempData["mensagemErroLogin"] != null)
+{
+    <script>
+        M.toast({ html: 'Epa! Login inválido.', classes: 'rounded red' });
+    </script>
+}
+

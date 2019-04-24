@@ -2,6 +2,7 @@
 using Sistema.Arquitetura.Library.Core.Interface;
 using Sistema.Arquitetura.Library.Core.Util.Security;
 using Idealize.VO;
+using System.Collections.Generic;
 
 namespace Idealize.DAO
 
@@ -9,7 +10,7 @@ namespace Idealize.DAO
     /// <summary>
     /// Classe de Acesso a Dados da Tabela aluno
     /// </summary>
-    public class TipoQuestaoDAO : NativeDAO<TipoQuestao>, IBaseDAO<TipoQuestao, int>
+    public class TipoQuestaoDAO : NativeDAO<TipoQuestao>
     {
 
         /// <summary>
