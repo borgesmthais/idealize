@@ -30,6 +30,8 @@ namespace Idealize.Web.Controllers
                 return View();
             }
 
+            TempData["nomeUsuario"] = loginFuncionario.login.ToString();
+
             return RedirectToAction("Index", "Home");
         }
     }

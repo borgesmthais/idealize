@@ -70,12 +70,12 @@ using Idealize.Web.Models;
             WriteLiteral("\r\n<div class=\"login\">\r\n    <div class=\"card\">\r\n        <div class=\"card-content\">\r\n            <div>\r\n                ");
             EndContext();
             BeginContext(189, 1746, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f404e57eb5594db1aec365b1ea050cf8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db98fd1535a6456d95aff48a9ac40a0d", async() => {
                 BeginContext(250, 77, true);
                 WriteLiteral("\r\n                    <div class=\"idealize center\">\r\n                        ");
                 EndContext();
                 BeginContext(327, 81, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "de153b8746ff4d31bd677d529a1f5fff", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9dd382a874064e75987670cc5c043ae7", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
